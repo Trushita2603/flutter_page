@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       home: Material(
         child: Center(
           child: Container(
-            child: Text("ok App Run DON 😂"),
+            child: Text("ok App DON 😂"),
           ),
         ),
       ),
