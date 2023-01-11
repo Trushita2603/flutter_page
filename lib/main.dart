@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_page/Pages/login_page.dart';
+import 'package:flutter_page/utils/routes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// tu na main method nahi define keli ithe are ho void rahile
+import 'Pages/home_page.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
 }
 
-// ata kar run kar na run
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("ok App DON 😂"),
-          ),
-        ),
+      //home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+    fontFamily: GoogleFonts.lato().fontFamily,
+    ), //direct external fonts
+    debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        //primarySwatch: Colors.yellow,
       ),
+      initialRoute: "/login",
+      routes: {
+        "/": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+      },
     );
   }
 }
-//tu solve karayla lag la la natar kay proble hota hech chala gela
-// as yet ka kas tuch mhante na file gayb hota hona atta tsech jhale  mag mi lib m,adhe home page file lkashi banu
-// wait call karto
