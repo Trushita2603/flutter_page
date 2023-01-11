@@ -6,62 +6,62 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child:SingleChildScrollView(
-      child: Column(
-        children: [
-          Image.asset(
-            'assets/images/login.png',
-            fit: BoxFit.cover,
-          ),
-          SizedBox(
-            height: 20.0,
-            //child: Text("Trushita"),
-          ),
-          Text(
-            'Welcome',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/login.png',
+              fit: BoxFit.cover,
             ),
-          ),
-          SizedBox(
-            height: 20.0,
-            //child: Text("Trushita"),
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 20.0, horizontal: 32.0),
-            child: Column(
-              children: [
-                TextFormField(
-                  //obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Enter username",
-                    labelText: "Username",
-                  ),
-                ),
-                TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Enter password",
-                    labelText: "Password",
-                  ),
-                ),
-                SizedBox(
-                  height: 40.0,
-                ),
-                ElevatedButton(
-                  child: Text("Login"),
-                  style: TextButton.styleFrom(minimumSize: Size(120, 40)),
-                  onPressed: () {
-                    Navigator.pushNamed(context, MyRoutes.homeRoute);
-                  },
-                ),
-              ],
+            SizedBox(
+              height: 20.0,
+              //child: Text("Trushita"),
             ),
-          ),
-        ],
-      ),
+            Text(
+              'Welcome',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+              //child: Text("Trushita"),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 32.0),
+              child: Column(
+                children: [
+                  TextFormField(
+                    //obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter username",
+                      labelText: "Username",
+                    ),
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter password",
+                      labelText: "Password",
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40.0,
+                  ),
+                  ElevatedButton(
+                    child: Text("Login"),
+                    style: TextButton.styleFrom(minimumSize: Size(120, 40)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.homeRoute); //routes
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
